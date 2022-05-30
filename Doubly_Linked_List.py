@@ -10,6 +10,7 @@ class DLL:
         NN = node(data)
         if self.head == None:
             self.head = NN
+            print(f"{data} inserted at beginning")
             return
         NN.next = self.head
         self.head.prev = NN
@@ -20,6 +21,7 @@ class DLL:
             print("Empty LL")
             return
         if self.head.next == None:
+            print(f"{self.head.data} deleted from beginning")
             self.head = None
             return
         temp = self.head
